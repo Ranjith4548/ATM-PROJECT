@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block title %}Balance | ATM Banking{% endblock %}
+{% block content %}
+<div class="operation-layout"><a class="back-link" href="/dashboard/{{ session['username'] }}"><i data-lucide="arrow-left"></i> Back to menu</a><p class="eyebrow">Account overview</p><h1>Account balance</h1><p class="muted">Here is your current available balance.</p><div class="balance-card"><div><small>Available balance</small><strong>₹{{balance}}</strong><span>Account holder: {{username}}</span></div><i data-lucide="wallet-cards"></i></div>{% if session.get('last_receipt') %}<a class="button" href="{{ url_for('download_receipt') }}"><i data-lucide="download"></i> Download transaction receipt</a>{% endif %}<a class="button" href="/dashboard/{{ session['username'] }}">Return to menu</a></div>
+
+{% endblock %}

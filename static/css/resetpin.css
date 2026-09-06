@@ -1,0 +1,12 @@
+body:has(input[name='npin']) {
+	background-color: var(--paper);
+	background: radial-gradient(circle at 88% 12%, #9bbcf2 0, transparent 42%), linear-gradient(145deg, #e3edff, #fafcff 70%);
+}
+
+body:has(input[name='npin']) form {
+	border-top: 5px solid #344054;
+}
+
+body:has(input[name='npin']) input[type='submit'] {
+	background: #344054;
+}

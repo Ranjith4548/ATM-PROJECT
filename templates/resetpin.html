@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Reset PIN | ATM Banking{% endblock %}
+{% block content %}
+<div class="operation-layout"><a class="back-link" href="/verify"><i data-lucide="arrow-left"></i> Back to verification</a><p class="eyebrow">Account recovery</p><h1>Choose a new PIN</h1><p class="muted">Create a PIN you can use the next time you access the ATM.</p><form method="post"><label for="npin">New PIN</label><input id="npin" type="password" name="npin" required><label for="cpin">Confirm new PIN</label><input id="cpin" type="password" name="cpin" required><input type="submit" value="Update PIN"></form>{% if info %}<p class="error" role="alert">{{info}}</p>{% endif %}</div>
+{% endblock %}

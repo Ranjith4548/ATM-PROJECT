@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard | ATM Banking{% endblock %}
+{% block content %}
+<div class="hero-row"><div><p class="eyebrow">ATM terminal / secure session</p><h1>Welcome, {{session['username']}}</h1><h2>Select a transaction to continue.</h2></div><span class="terminal-tag"><i data-lucide="shield-check"></i> Session protected</span></div>
+<div class="action-grid" aria-label="ATM services">
+    <a class="action-link" href="/checkBalance"><span class="action-icon"><i data-lucide="wallet-cards"></i></span><span class="action-copy"><span><strong>Check balance</strong><span>View your available balance</span></span><i class="action-arrow" data-lucide="arrow-up-right"></i></span></a>
+    <a class="action-link" href="/deposit"><span class="action-icon"><i data-lucide="wallet-minimal"></i></span><span class="action-copy"><span><strong>Deposit</strong><span>Add money to your account</span></span><i class="action-arrow" data-lucide="arrow-up-right"></i></span></a>
+    <a class="action-link" href="/withdraw"><span class="action-icon"><i data-lucide="banknote-arrow-down"></i></span><span class="action-copy"><span><strong>Withdraw</strong><span>Withdraw cash from your account</span></span><i class="action-arrow" data-lucide="arrow-up-right"></i></span></a>
+    <a class="action-link" href="/viewtransactions"><span class="action-icon"><i data-lucide="receipt-text"></i></span><span class="action-copy"><span><strong>Transactions</strong><span>View your transaction history</span></span><i class="action-arrow" data-lucide="arrow-up-right"></i></span></a>
+</div>
+{% endblock %}

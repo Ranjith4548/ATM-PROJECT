@@ -1,0 +1,88 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "sowmya",
+            "email": "sowmya@codegnan.com",
+            "pin": "1234",
+            "history": [],
+            "balance": 0
+        },
+        {
+            "id": 2,
+            "username": "sowmya",
+            "email": "tummalasowmya@gmail.com",
+            "pin": "98765",
+            "history": [],
+            "balance": 0
+        },
+        {
+            "id": 3,
+            "username": "",
+            "email": "",
+            "pin": "",
+            "history": [],
+            "balance": 0
+        },
+        {
+            "id": 4,
+            "username": "sowmya",
+            "email": "sowmyat@gmail.com",
+            "pin": "1243256",
+            "history": [],
+            "balance": 0
+        },
+        {
+            "id": 5,
+            "username": "naresh",
+            "email": "naresh@gmail.com",
+            "pin": "1234",
+            "history": [],
+            "balance": 0
+        },
+        {
+            "id": 6,
+            "username": "ajay",
+            "email": "ajaydasari304@gmai.com",
+            "pin": "12345",
+            "history": [],
+            "balance": 0
+        },
+        {
+            "id": 7,
+            "username": "ajay",
+            "email": "ajaydasari304@gmail.com",
+            "pin": "12345",
+            "history": [
+                "56980 deposited",
+                "23456 deposited",
+                "45637 withdrawn",
+                "34788 withdrawn",
+                "5000000 deposited",
+                "4500 Withdraw",
+                "40000 Withdraw",
+                "428 deposited",
+                "34576 Withdraw",
+                "45 deposited",
+                "345 Withdraw",
+                "4567 deposited"
+            ],
+            "balance": 4925630
+        },
+        {
+            "id": 8,
+            "username": "Ranjithkumar",
+            "email": "paanchalaranjithkumar84@gmail.com",
+            "pin": "123456",
+            "history": [
+                "100000 deposited",
+                "10000 deposited",
+                "5000 Withdraw",
+                "10000 deposited",
+                "10000 deposited",
+                "5000 Withdraw"
+            ],
+            "balance": 120000
+        }
+    ]
+}

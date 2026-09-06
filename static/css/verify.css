@@ -1,0 +1,20 @@
+body:has(input[name='otp']) {
+	background-color: var(--paper);
+	background: radial-gradient(circle at 12% 12%, #70d5c9 0, transparent 42%), linear-gradient(145deg, #ccefeb, #f8fffe 70%);
+}
+
+body:has(input[name='otp']) form {
+	border-top: 5px solid #087f5b;
+	background: linear-gradient(145deg, #ffffff, #effbf8);
+}
+
+body:has(input[name='otp']) input[name='otp'] {
+	font-size: 1.3rem;
+	font-weight: 700;
+	letter-spacing: 0.35em;
+	text-align: center;
+}
+
+body:has(input[name='otp']) input[type='submit'] {
+	background: #087f5b;
+}

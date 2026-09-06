@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Login | ATM Banking{% endblock %}
+{% block content %}
+<div class="auth-layout">
+    <section class="auth-panel">
+        <p class="eyebrow">ATM terminal / secure access</p>
+        <h1>Banking that stays simple.</h1>
+        <p class="lead">Your everyday ATM services, gathered in one calm and secure place.</p>
+        <div class="auth-visual"><span class="visual-chip">Protected session</span><h2>Ready when you are.</h2><p>Encrypted access for your account and transactions.</p></div>
+    </section>
+    <section class="auth-card">
+        <p class="eyebrow">Welcome back</p><h2>Sign in securely</h2><p class="muted">Enter your registered details to continue.</p>
+        <form method="post">
+            <label for="email">Email address</label><input id="email" type="email" name="email" autocomplete="email" required>
+            <label for="pin">PIN</label><span class="input-with-action"><input id="pin" type="password" name="pin" autocomplete="current-password" required><button type="button" class="input-action" data-toggle-password="pin" aria-label="Show PIN"><i data-lucide="eye"></i></button></span>
+            <input type="submit" value="Enter ATM">
+        </form>
+        {% if info %}<p class="error" role="alert">{{info}}</p>{% endif %}
+        <div class="auth-links"><a href="/forgotpin">Forgot PIN?</a><span class="muted">New here? <a href="/register">Register</a></span></div>
+    </section>
+</div>
+{% endblock %}

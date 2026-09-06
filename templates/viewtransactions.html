@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Transactions | ATM Banking{% endblock %}
+{% block content %}
+<div class="operation-layout"><a class="back-link" href="/dashboard/{{ session['username'] }}"><i data-lucide="arrow-left"></i> Back to menu</a><p class="eyebrow">Account activity</p><h1>Transaction history</h1><p class="muted">Review your recent account activity.</p>{% if history%}<table><tr><th>#</th><th>Transaction details</th></tr>
+        {% for i in range(length) %}
+        <tr>
+            <td>{{i+1}}</td><td>{{history[i]}}</td><td><a href="{{ url_for('download_history_receipt', transaction_index=i) }}" aria-label="Download receipt for transaction {{ i + 1 }}"><i data-lucide="download"></i></a></td></tr>{% endfor %}</table>{% else %}<div class="empty-state"><i data-lucide="receipt"></i><p>No transaction history yet.</p></div>{% endif %}<button class="button" type="button" data-export-pdf>Print statement</button></div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

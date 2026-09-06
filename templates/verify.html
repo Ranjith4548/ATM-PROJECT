@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Verify OTP | ATM Banking{% endblock %}
+{% block content %}
+<div class="operation-layout"><a class="back-link" href="/forgotpin"><i data-lucide="arrow-left"></i> Back to recovery</a><p class="eyebrow">Identity check</p><h1>Verify your code</h1><p class="muted">Enter the one-time password sent to your email.</p><form method="post"><label for="otp">One-time password</label><input id="otp" type="text" name="otp" inputmode="numeric" required><input type="submit" value="Verify code"></form>{% if info %}<p class="error" role="alert">{{info}}</p>{% endif %}</div>
+{% endblock %}

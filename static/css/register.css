@@ -1,0 +1,12 @@
+body:has(input[name='uname']) {
+	background-color: var(--paper);
+	background: radial-gradient(circle at 88% 12%, #b7e58c 0, transparent 42%), linear-gradient(145deg, #eef9df, #fbfff8 70%);
+}
+
+body:has(input[name='uname']) form {
+	border-top: 5px solid #4e7d28;
+}
+
+body:has(input[name='uname']) input[type='submit'] {
+	background: #4e7d28;
+}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Register | ATM Banking{% endblock %}
+{% block content %}
+<div class="auth-layout"><section class="auth-panel"><p class="eyebrow">New customer access</p><h1>Set up your ATM access.</h1><p class="lead">Create a secure account for the four services you use most.</p><div class="auth-visual"><span class="visual-chip">Fast setup</span><h2>Your account, your rhythm.</h2></div></section><section class="auth-card"><p class="eyebrow">Create account</p><h2>Register</h2><p class="muted">Use your details to get started.</p><form method="post"><label for="uname">Username</label><input id="uname" type="text" name="uname" required><label for="email">Email address</label><input id="email" type="email" name="email" required><label for="pin">PIN</label><span class="input-with-action"><input id="pin" type="password" name="pin" required><button type="button" class="input-action" data-toggle-password="pin" aria-label="Show PIN"><i data-lucide="eye"></i></button></span><input type="submit" value="Create account"></form>{% if info %}<p class="error" role="alert">{{info}}</p>{% endif %}<p class="auth-links"><span class="muted">Already have an account?</span><a href="/login">Sign in</a></p></section></div>
+{% endblock %}
+
+
+

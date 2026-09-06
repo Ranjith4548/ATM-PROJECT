@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Forgot PIN | ATM Banking{% endblock %}
+{% block content %}
+<div class="operation-layout"><a class="back-link" href="/login"><i data-lucide="arrow-left"></i> Back to login</a><p class="eyebrow">Account recovery</p><h1>Forgot PIN?</h1><p class="muted">We will send a one-time code to your registered email.</p><form method="post"><label for="email">Email address</label><input id="email" type="email" name="email" required><input type="submit" value="Send verification code"></form>{% if info %}<p class="error" role="alert">{{info}}</p>{% endif %}</div>
+{% endblock %}

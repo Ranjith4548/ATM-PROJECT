@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}ATM Banking{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <script src="https://unpkg.com/lucide@latest" defer></script>
+        <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+    </head>
+    <body class="page-{{ request.endpoint or 'base' }}">
+        <nav aria-label="Primary navigation" class="site-header">
+        <a class="brand" href="{% if session.get('username') %}/dashboard/{{ session['username'] }}{% else %}/login{% endif %}">
+            <span class="brand-mark" aria-hidden="true">A</span>
+            <span class="brand-copy"><strong>ATM Banking</strong><small>Secure access terminal</small></span>
+        </a>
+        <div class="nav-links">
+        {% if session.get("username") %}<span class="system-status"><i data-lucide="radio"></i> System online</span>{% endif %}
+        {% if session.get("username") %}<span class="header-clock"><span data-current-date></span><strong data-current-time></strong></span>{% endif %}
+        {% if session.get("username") %}
+        <a href="/dashboard/{{session['username']}}">Dashboard</a>
+        <a href="/logout">Logout</a>
+        {% else %}
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        {% endif %}
+        </div>
+        </nav>
+
+        <main class="page-shell">
+            {% block content %}{% endblock %}
+        </main>
+
+            <footer aria-label="Site footer">
+                 <span>Secure banking <b aria-hidden="true">•</b> Your money, our priority</span>
+                 <span>&copy; 2026 ATM Banking</span>
+             </footer>
+    </body>
+</html>

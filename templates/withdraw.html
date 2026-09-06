@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Withdraw | ATM Banking{% endblock %}
+{% block content %}
+<div class="operation-layout"><a class="back-link" href="/dashboard/{{ session['username'] }}"><i data-lucide="arrow-left"></i> Back to menu</a><p class="eyebrow">Cash access</p><h1>Withdraw money</h1><p class="muted">Take cash from your account.</p><div class="mini-balance">Available balance <strong>₹{{ balance|default(0) }}</strong></div><form method="post"><label for="amount">Enter amount</label><input id="amount" type="number" name="amount" min="1" placeholder="₹ 0" required><div class="quick-amounts"><button class="quick-amount" type="button" data-amount="500">₹500</button><button class="quick-amount" type="button" data-amount="1000">₹1,000</button><button class="quick-amount" type="button" data-amount="2000">₹2,000</button><button class="quick-amount" type="button" data-amount="5000">₹5,000</button><button class="quick-amount" type="button" data-amount="10000">₹10,000</button></div><input type="submit" value="Withdraw now →"></form>{% if info %}<p class="error" role="alert">{{info}}</p>{% endif %}</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

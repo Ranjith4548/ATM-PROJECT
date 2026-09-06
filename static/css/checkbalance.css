@@ -1,0 +1,21 @@
+body:has(p:nth-of-type(2)) {
+	background-color: var(--paper);
+	background: radial-gradient(circle at 86% 14%, #62cfc3 0, transparent 44%), linear-gradient(145deg, #c5eee9, #f8fffe 70%);
+}
+
+body:has(p:nth-of-type(2)) main > p:last-of-type {
+	position: relative;
+	padding: 28px;
+	border: 1px solid #a7dcd5;
+	border-left: 6px solid #087f78;
+	border-radius: 14px;
+	background: linear-gradient(135deg, #e5f5f3, #ffffff 72%);
+	box-shadow: 0 20px 45px rgba(8, 127, 120, 0.14);
+	color: #07534f;
+	font-size: clamp(1.35rem, 4vw, 2rem);
+	font-weight: 700;
+}
+
+body:has(p:nth-of-type(2)) main > h1 {
+	color: #07534f;
+}

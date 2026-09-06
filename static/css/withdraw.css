@@ -1,0 +1,17 @@
+body:has(input[name='amount']) {
+	background-color: var(--paper);
+	background: radial-gradient(circle at 90% 12%, #f58f9c 0, transparent 38%), radial-gradient(circle at 8% 88%, #eab0d9 0, transparent 32%), linear-gradient(135deg, #ffe1e5, #fff5fa 70%);
+}
+
+body:has(input[name='amount']) form {
+	border-top: 5px solid #b42318;
+	background: linear-gradient(145deg, #ffffff, #fff0f2);
+}
+
+body:has(input[name='amount']) input[type='submit'] {
+	background: #b42318;
+}
+
+body:has(input[name='amount']) main > h1 {
+	color: #8f2d25;
+}
